@@ -8,6 +8,7 @@ import (
 func main() {
 	addOpts := fx.Options(
 		fx.Provide(config.NewConfig),
+		fx.Provide(scrapper_app.NewScheduler),
 	)
 	fx.New(addOpts).Run()
 }
